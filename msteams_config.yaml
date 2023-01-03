@@ -1,0 +1,2 @@
+connectors:
+  - alert_channel: "https://kproductivity.webhook.office.com/webhookb2/3b8becbd-9acf-4d38-b2c0-6af84263543e@8331e14a-9134-4288-bf5a-5e2c8412f074/IncomingWebhook/9454ea22981f4a3a88f18e497d145791/92d423ce-77a9-423d-8fb1-66d215980214"

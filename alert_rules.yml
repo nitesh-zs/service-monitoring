@@ -1,0 +1,17 @@
+groups:
+  - name: local service alerts
+    rules:
+      - alert: ServiceDown
+        expr: up{job="local"} == 0
+        for: 10s
+        labels:
+          severity: critical
+        annotations:
+          summary: The Local Service is DOWN!
+
+      - alert: PublishFailure
+        expr: increase(thanos_pubsub_publish_failure_count{job="local"}[10s]) > 0
+        labels:
+          severity: major
+        annotations:
+          summary: Local service is unable to publish messages to kafka
